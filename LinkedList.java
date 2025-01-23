@@ -46,10 +46,7 @@ public static void main(String[] args) {
             System.out.println("LINKED LIST CREATED");
             System.out.println("LINKED LIST BEFORE INSERTING");
             list.displayList();
-          //  System.out.println("ENTER THE POSITON WHERE YOU WANT TO INSERT");
-          //  if(sc.hasNextInt())
-           // {
-          //  pos=sc.nextInt();
+          //  System.out.println("ENTER THE POSITON WHERE YOU WANT TO INSERT")
             System.out.println("ENTER THE ELEMENT TO BE INSERTED:");
             if(sc.hasNextInt())
             {
@@ -66,9 +63,20 @@ public static void main(String[] args) {
             }
            }
     }
-public void insertBegin() 
+public void insertBegin(int data) 
     {    
-        // TYPE YOUR CODE HERE   
+        Node newNode=new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else
+        {
+        newNode.next=head;
+        head=newNode;
+        }
+         System.out.println("Element Inserted");
     } 
 public void displayList() {
         Node current = head;
